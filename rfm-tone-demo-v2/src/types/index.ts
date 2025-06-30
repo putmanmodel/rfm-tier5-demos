@@ -1,0 +1,1 @@
+export type Tone = 'calm' | 'neutral' | 'alert' | 'excited' | 'agitated';

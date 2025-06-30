@@ -1,0 +1,31 @@
+.tone-hud-container {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Base layer for smooth background */
+.tone-hud-base {
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  transition: background-color 1s ease;
+}
+
+/* Glow overlay with blur + pulse */
+.tone-hud-glow {
+  position: absolute;
+  inset: 0;
+  animation-name: pulseGlow;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Core glow animation */
+@keyframes pulseGlow {
+  0%   { filter: brightness(100%); }
+  50%  { filter: brightness(115%); }
+  100% { filter: brightness(100%); }
+}
